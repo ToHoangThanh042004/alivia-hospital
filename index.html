@@ -172,19 +172,39 @@
               </div>
             </div>
 
-            <!-- Hero Image Composition -->
+            <!-- Hero Image & 3D Interactive Composition -->
             <div class="hero-visual-wrapper">
-              <div class="hero-image-frame">
-                <img 
-                  src="/images/hero_consultation.jpg" 
-                  alt="Bác sĩ chuyên khoa tại Bệnh viện Quốc tế Alivia đang tận tâm tư vấn cho người bệnh" 
-                  class="hero-main-img" 
-                  width="800" 
-                  height="600" 
-                  loading="eager"
-                  fetchpriority="high"
-                />
+              <div class="hero-3d-frame" id="hero3dContainer">
+                <!-- 3D Kinetic Sculpture Canvas (Three.js WebGL) -->
+                <canvas 
+                  id="hero3dCanvas" 
+                  class="hero-3d-canvas" 
+                  role="img" 
+                  aria-label="Tác phẩm điêu khắc nghệ thuật 3D biểu tượng cho sự trường tồn và thấu hiểu y khoa Alivia"
+                ></canvas>
+
+                <!-- High-Resolution Clinical Photograph (Toggleable & Static Fallback) -->
+                <div class="hero-photo-fallback" id="heroPhotoFallback">
+                  <img 
+                    src="/images/hero_consultation.jpg" 
+                    alt="Bác sĩ chuyên khoa tại Bệnh viện Quốc tế Alivia đang tận tâm tư vấn cho người bệnh" 
+                    class="hero-main-img" 
+                    width="800" 
+                    height="600" 
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                </div>
+
+                <!-- 3D / Photo Mode Switcher Pill -->
+                <div class="hero-view-switch-dock">
+                  <button type="button" class="hero-visual-toggle-btn" id="heroVisualToggle" aria-label="Chuyển đổi giữa tác phẩm 3D và ảnh thực tế" aria-pressed="false">
+                    <span class="toggle-icon" aria-hidden="true">✦</span>
+                    <span class="toggle-label">Xem ảnh bệnh viện</span>
+                  </button>
+                </div>
                 
+                <!-- Clinical Accreditation & Consilium Floating Badge -->
                 <div class="hero-floating-badge" role="status">
                   <div class="badge-dot" aria-hidden="true"></div>
                   <div class="badge-text-wrap">
@@ -602,55 +622,65 @@
             </p>
           </div>
 
-          <div class="care-journey-flow">
-            <div class="journey-node">
-              <div class="node-indicator">
-                <span class="node-number">01</span>
-                <span class="node-line" aria-hidden="true"></span>
-              </div>
-              <div class="node-card">
-                <h4 class="node-title">Lắng nghe nhu cầu</h4>
-                <p class="node-desc">
-                  Thấu hiểu triệu chứng, tiền sử bệnh và mối lo âu của người bệnh qua cuộc gọi tiền khám chu đáo từ Thư ký Y khoa chuyên trách.
-                </p>
-              </div>
+          <div class="journey-stepper-wrap">
+            <div class="journey-progress-bar" aria-hidden="true">
+              <div class="journey-progress-track" id="journeyProgressTrack"></div>
             </div>
 
-            <div class="journey-node">
-              <div class="node-indicator">
-                <span class="node-number">02</span>
-                <span class="node-line" aria-hidden="true"></span>
+            <div class="care-journey-flow" role="tablist" aria-label="Quy trình 4 bước chăm sóc người bệnh Alivia">
+              <div class="journey-node" data-step="0">
+                <div class="node-indicator">
+                  <span class="node-number">01</span>
+                  <span class="node-line" aria-hidden="true"></span>
+                </div>
+                <div class="node-card">
+                  <div class="node-badge-step">Bước 01</div>
+                  <h4 class="node-title">Lắng nghe nhu cầu</h4>
+                  <p class="node-desc">
+                    Thấu hiểu triệu chứng, tiền sử bệnh và mối lo âu của người bệnh qua cuộc gọi tiền khám chu đáo từ Thư ký Y khoa chuyên trách.
+                  </p>
+                </div>
               </div>
-              <div class="node-card">
-                <h4 class="node-title">Kết nối chuyên khoa phù hợp</h4>
-                <p class="node-desc">
-                  Định tuyến chuẩn xác đến đúng bác sĩ đầu ngành theo đúng bệnh lý, tránh tuyệt đối tình trạng khám lòng vòng hay chỉ định cận lâm sàng trùng lặp.
-                </p>
-              </div>
-            </div>
 
-            <div class="journey-node">
-              <div class="node-indicator">
-                <span class="node-number">03</span>
-                <span class="node-line" aria-hidden="true"></span>
+              <div class="journey-node" data-step="1">
+                <div class="node-indicator">
+                  <span class="node-number">02</span>
+                  <span class="node-line" aria-hidden="true"></span>
+                </div>
+                <div class="node-card">
+                  <div class="node-badge-step">Bước 02</div>
+                  <h4 class="node-title">Thăm khám và tư vấn</h4>
+                  <p class="node-desc">
+                    Bác sĩ chuyên khoa đầu ngành trực tiếp thăm khám tối thiểu 20–30 phút, giải thích tường minh mọi kết quả chẩn đoán và lắng nghe toàn diện.
+                  </p>
+                </div>
               </div>
-              <div class="node-card">
-                <h4 class="node-title">Thăm khám và tư vấn tận tâm</h4>
-                <p class="node-desc">
-                  Bác sĩ trưởng khoa trực tiếp thăm khám kỹ lưỡng, giải thích tường minh mọi kết quả chẩn đoán và đồng thuận cùng người bệnh về hướng điều trị.
-                </p>
-              </div>
-            </div>
 
-            <div class="journey-node">
-              <div class="node-indicator">
-                <span class="node-number">04</span>
+              <div class="journey-node" data-step="2">
+                <div class="node-indicator">
+                  <span class="node-number">03</span>
+                  <span class="node-line" aria-hidden="true"></span>
+                </div>
+                <div class="node-card">
+                  <div class="node-badge-step">Bước 03</div>
+                  <h4 class="node-title">Lựa chọn phương án chăm sóc</h4>
+                  <p class="node-desc">
+                    Hội đồng chuyên khoa (Tumor Board & Heart Team) cùng người bệnh đồng thuận lựa chọn phác đồ điều trị cá thể hóa tối ưu nhất.
+                  </p>
+                </div>
               </div>
-              <div class="node-card">
-                <h4 class="node-title">Hướng dẫn bước tiếp theo</h4>
-                <p class="node-desc">
-                  Cung cấp hồ sơ bệnh án số hóa trọn đời, phác đồ dùng thuốc chi tiết, chế độ dinh dưỡng phục hồi và lịch hẹn tái khám được nhắc nhở tự động.
-                </p>
+
+              <div class="journey-node" data-step="3">
+                <div class="node-indicator">
+                  <span class="node-number">04</span>
+                </div>
+                <div class="node-card">
+                  <div class="node-badge-step">Bước 04</div>
+                  <h4 class="node-title">Theo dõi và đồng hành</h4>
+                  <p class="node-desc">
+                    Hồ sơ sức khỏe số hóa trọn đời, điều dưỡng chuyên trách hỗ trợ sau khám, nhắc lịch định kỳ và đồng hành phục hồi sức khỏe.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

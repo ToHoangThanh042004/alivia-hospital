@@ -1,7 +1,9 @@
 /**
  * ALIVIA INTERNATIONAL HOSPITAL — MASTER JAVASCRIPT LOGIC
- * Implements: Form Validation, Appointment Scheduling, Interactive Tabs, Accordions, Modal UX
+ * Implements: Form Validation, Appointment Scheduling, Interactive Tabs, Accordions, Modal UX, 3D Experiences
  */
+
+import { initMotion3D } from './motion3d.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
@@ -14,7 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initAppointmentBookingForm();
   initScrollEffects();
+
+  // Initialize CSS-based 3D motion and patient journey interactions immediately
+  initMotion3D();
+
+  // Lazy-load Three.js 3D kinetic sculpture asynchronously without blocking initial render
+  if (window.requestIdleCallback) {
+    window.requestIdleCallback(() => loadHero3D());
+  } else {
+    setTimeout(() => loadHero3D(), 100);
+  }
 });
+
+function loadHero3D() {
+  import('./hero3d.js')
+    .then(({ initHero3D }) => {
+      initHero3D();
+    })
+    .catch((err) => {
+      console.info('ALIVIA: Fallback to static clinical hero visual.', err);
+      const container = document.getElementById('hero3dContainer');
+      if (container) container.classList.add('fallback-active');
+    });
+}
 
 /* --------------------------------------------------------------------------
    1. MOBILE NAVIGATION & DRAWER
