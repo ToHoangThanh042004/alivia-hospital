@@ -1,9 +1,7 @@
 /**
  * ALIVIA INTERNATIONAL HOSPITAL — MASTER JAVASCRIPT LOGIC
- * Implements: Form Validation, Appointment Scheduling, Interactive Tabs, Accordions, Modal UX, 3D Experiences
+ * Implements: Form Validation, Appointment Scheduling, Interactive Tabs, Accordions, Modal UX
  */
-
-import { initMotion3D } from './motion3d.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
@@ -16,29 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initAppointmentBookingForm();
   initScrollEffects();
-
-  // Initialize CSS-based 3D motion and patient journey interactions immediately
-  initMotion3D();
-
-  // Lazy-load Three.js 3D kinetic sculpture asynchronously without blocking initial render
-  if (window.requestIdleCallback) {
-    window.requestIdleCallback(() => loadHero3D());
-  } else {
-    setTimeout(() => loadHero3D(), 100);
-  }
 });
-
-function loadHero3D() {
-  import('./hero3d.js')
-    .then(({ initHero3D }) => {
-      initHero3D();
-    })
-    .catch((err) => {
-      console.info('ALIVIA: Fallback to static clinical hero visual.', err);
-      const container = document.getElementById('hero3dContainer');
-      if (container) container.classList.add('fallback-active');
-    });
-}
 
 /* --------------------------------------------------------------------------
    1. MOBILE NAVIGATION & DRAWER
@@ -66,16 +42,16 @@ function initMobileNavigation() {
   }
 
   mobileMenuBtn.addEventListener('click', openDrawer);
-  
+
   if (mobileCloseBtn) {
     mobileCloseBtn.addEventListener('click', closeDrawer);
   }
 
   // Close when clicking outside drawer
   document.addEventListener('click', (e) => {
-    if (mobileDrawer.classList.contains('open') && 
-        !mobileDrawer.contains(e.target) && 
-        !mobileMenuBtn.contains(e.target)) {
+    if (mobileDrawer.classList.contains('open') &&
+      !mobileDrawer.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)) {
       closeDrawer();
     }
   });
@@ -325,7 +301,7 @@ function initFacilityTabs() {
 
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
-      
+
       const targetPanelId = tab.getAttribute('aria-controls');
       const targetPanel = document.getElementById(targetPanelId);
       if (targetPanel) {

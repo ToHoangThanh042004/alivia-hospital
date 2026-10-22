@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Lịch Hẹn Khám Ưu Tiên & Trợ Lý Y Khoa | Bệnh Viện Quốc Tế Alivia</title>
+    <meta name="description" content="Đặt lịch khám chuyên khoa cùng các Giáo sư, Bác sĩ đầu ngành tại Bệnh viện Quốc tế Alivia. Tiếp đón ưu tiên, bảo lãnh viện phí trực tiếp, hỗ trợ 24/7." />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://aliviahospital.vn/dat-lich-kham/" />
+    <meta name="theme-color" content="#142F43" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aliviahospital.vn/dat-lich-kham/" />
+    <meta property="og:title" content="Đặt Lịch Khám Ưu Tiên | Bệnh Viện Quốc Tế Alivia" />
+    <meta property="og:description" content="Khám chữa bệnh không chờ đợi, dịch vụ trợ lý y khoa riêng, bảo mật hồ sơ theo Nghị định 13/2023/NĐ-CP." />
+    
+    <!-- Google Fonts: Editorial Pairing (Newsreader + Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-to-content">Chuyển đến nội dung chính</a>
+
+    <!-- TOP INFORMATION BAR -->
+    <header class="site-header-wrapper" id="site-header">
+      <div class="top-utility-bar">
+        <div class="container utility-content">
+          <div class="utility-left">
+            <div class="utility-item emergency-hotline-item">
+              <span class="emergency-pulse-dot" aria-hidden="true"></span>
+              <span class="utility-label">CẤP CỨU KHẨN CẤP 24/7:</span>
+              <a href="tel:19006868" class="hotline-link">
+                <strong>1900 6868</strong>
+              </a>
+              <span class="divider-hairline" aria-hidden="true">|</span>
+              <span class="utility-address">Số 10 Mai Chí Thọ, Đô thị Sala, TP. Thủ Đức, TP. HCM</span>
+            </div>
+          </div>
+          <div class="utility-right">
+            <div class="utility-item">
+              <span>Đường dây điều phối viên đặt hẹn: 1900 6868</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN NAVIGATION -->
+      <nav class="main-navbar" aria-label="Điều hướng chính">
+        <div class="container nav-container">
+          <a href="/" class="brand-logo" aria-label="Bệnh viện Quốc tế Alivia Trang chủ">
+            <div class="brand-monogram">
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="36" height="36" rx="6" fill="#142F43"/>
+                <path d="M18 8V28M8 18H28" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="18" cy="18" r="3" fill="#B68B62"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">ALIVIA</span>
+              <span class="brand-sub">INTERNATIONAL HOSPITAL • JCI ACCREDITED</span>
+            </div>
+          </a>
+
+          <div class="nav-links-desktop">
+            <a href="/chuyen-khoa/" class="nav-link">Chuyên khoa</a>
+            <a href="/doi-ngu-bac-si/" class="nav-link">Bác sĩ chuyên gia</a>
+            <a href="/ve-alivia/" class="nav-link">Về ALIVIA</a>
+            <a href="/huong-dan-kham/" class="nav-link">Hướng dẫn khám</a>
+            <a href="/goc-suc-khoe/" class="nav-link">Cẩm nang y khoa</a>
+            <a href="/lien-he/" class="nav-link">Liên hệ</a>
+          </div>
+
+          <div class="nav-actions">
+            <a href="tel:19006868" class="btn btn-outline nav-cta-booking">
+              <span>Hotline: 1900 6868</span>
+            </a>
+            <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Mở danh mục điều hướng" aria-expanded="false">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MOBILE DRAWER MENU -->
+      <div class="mobile-menu-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer-inner">
+          <div class="drawer-header">
+            <div class="drawer-brand">
+              <strong>ALIVIA</strong>
+              <span>A More Human Standard of Care</span>
+            </div>
+            <button type="button" class="drawer-close-btn" id="mobileCloseBtn" aria-label="Đóng menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="drawer-nav">
+            <a href="/" class="drawer-link">Trang chủ</a>
+            <a href="/chuyen-khoa/" class="drawer-link">Trung tâm & Chuyên khoa mũi nhọn</a>
+            <a href="/doi-ngu-bac-si/" class="drawer-link">Hội đồng Bác sĩ chuyên gia</a>
+            <a href="/ve-alivia/" class="drawer-link">Về Bệnh viện Quốc tế ALIVIA</a>
+            <a href="/huong-dan-kham/" class="drawer-link">Hướng dẫn khám & Bảo hiểm</a>
+            <a href="/goc-suc-khoe/" class="drawer-link">Góc tri thức & Y học lâm sàng</a>
+            <a href="/lien-he/" class="drawer-link">Liên hệ & Chỉ đường</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <nav class="breadcrumbs-bar" aria-label="Đường dẫn điều hướng">
+      <div class="container">
+        <ol class="breadcrumbs-list">
+          <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item"><span class="breadcrumb-current" aria-current="page">Đặt lịch khám</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <!-- BOOKING CONCIERGE SECTION -->
+      <section class="section booking-section" id="dat-lich">
+        <div class="container">
+          <div class="booking-concierge-layout">
+            <!-- GUIDANCE & GUARANTEES PANE -->
+            <div class="booking-guidance-pane">
+              <span class="subpage-kicker">CONCIERGE SCHEDULING UX</span>
+              <h1 class="booking-heading">Đặt Lịch Khám & Tư Vấn Y Khoa Chuyên Sâu</h1>
+              <p class="booking-lead">
+                Chủ động lựa chọn chuyên gia đầu ngành, hình thức khám trực tiếp tại Campus Sala hoặc tư vấn Telehealth 
+                từ xa với sự đồng hành của trợ lý y khoa riêng.
+              </p>
+
+              <div class="booking-guarantees-list">
+                <div class="guarantee-item">
+                  <div class="guarantee-bullet" aria-hidden="true">01</div>
+                  <div class="guarantee-text">
+                    <strong>Không chờ đợi quá 15 phút</strong>
+                    <span>Hệ thống phân luồng thông minh đảm bảo người bệnh được bác sĩ tiếp đón đúng khung giờ đã hẹn.</span>
+                  </div>
+                </div>
+
+                <div class="guarantee-item">
+                  <div class="guarantee-bullet" aria-hidden="true">02</div>
+                  <div class="guarantee-text">
+                    <strong>Bảo lãnh viện phí trực tiếp 40+ đối tác</strong>
+                    <span>Hỗ trợ thanh toán thẳng với Bảo Việt, Liberty, Insmart, Bupa, Cigna, Pacific Cross... tại quầy thu ngân.</span>
+                  </div>
+                </div>
+
+                <div class="guarantee-item">
+                  <div class="guarantee-bullet" aria-hidden="true">03</div>
+                  <div class="guarantee-text">
+                    <strong>Bảo mật hồ sơ bệnh án chuẩn JCI</strong>
+                    <span>Dữ liệu y tế được mã hóa và bảo mật nghiêm ngặt theo Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân.</span>
+                  </div>
+                </div>
+
+                <div class="guarantee-item">
+                  <div class="guarantee-bullet" aria-hidden="true">04</div>
+                  <div class="guarantee-text">
+                    <strong>Hỗ trợ trực tiếp qua Tổng đài</strong>
+                    <span>Cần hỗ trợ khẩn cấp hoặc đặt lịch đoàn? Gọi ngay <a href="tel:19006868" class="hotline-inline-link">1900 6868</a> (24/7).</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- INTERACTIVE FORM SUITE -->
+            <div class="booking-form-suite" id="bookingFormSuite">
+              <div class="form-suite-header">
+                <div class="suite-title">Phiếu Tiếp Nhận Đăng Ký Khám Ưu Tiên</div>
+                <div class="suite-badge">Phản hồi trong 15 phút</div>
+              </div>
+
+              <form class="concierge-form" id="appointmentForm" novalidate>
+                <!-- Fieldset 1: Patient Information -->
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-header">
+                    <span class="step-index-chip">BƯỚC 1</span>
+                    <span class="step-title-text">Thông tin người bệnh</span>
+                  </legend>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="patientName" class="field-label">
+                        Họ và tên người khám <span class="required-star">*</span>
+                      </label>
+                      <input 
+                        type="text" 
+                        id="patientName" 
+                        name="patientName" 
+                        class="field-input" 
+                        placeholder="Ví dụ: Nguyễn Văn An" 
+                        required 
+                        autocomplete="name"
+                      />
+                      <span class="field-error" id="nameError">Vui lòng nhập họ và tên hợp lệ (tối thiểu 3 ký tự).</span>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="patientPhone" class="field-label">
+                        Số điện thoại di động <span class="required-star">*</span>
+                      </label>
+                      <input 
+                        type="tel" 
+                        id="patientPhone" 
+                        name="patientPhone" 
+                        class="field-input" 
+                        placeholder="Ví dụ: 0912 345 678" 
+                        required 
+                        autocomplete="tel"
+                      />
+                      <span class="field-error" id="phoneError">Vui lòng nhập số điện thoại Việt Nam hợp lệ (10 số).</span>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="patientEmail" class="field-label">
+                      Địa chỉ Email nhận lịch hẹn & bệnh án điện tử
+                    </label>
+                    <input 
+                      type="email" 
+                      id="patientEmail" 
+                      name="patientEmail" 
+                      class="field-input" 
+                      placeholder="ten.nguoidung@email.com" 
+                      autocomplete="email"
+                    />
+                    <span class="field-error" id="emailError">Vui lòng nhập đúng định dạng email.</span>
+                  </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Medical Need & Doctor -->
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-header">
+                    <span class="step-index-chip">BƯỚC 2</span>
+                    <span class="step-title-text">Nhu cầu chuyên khoa & Bác sĩ</span>
+                  </legend>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="specialtySelect" class="field-label">
+                        Chuyên khoa mong muốn khám <span class="required-star">*</span>
+                      </label>
+                      <select id="specialtySelect" name="specialtySelect" class="field-input field-select" required>
+                        <option value="">-- Chọn chuyên khoa --</option>
+                        <option value="Tim mạch Can thiệp">Tim mạch Can thiệp & Lồng ngực</option>
+                        <option value="Ung bướu & Miễn dịch">Ung bướu & Y học Miễn dịch</option>
+                        <option value="Cơ Xương Khớp & Thần kinh">Khoa Ngoại Thần kinh & Cột sống (MIS)</option>
+                        <option value="Tiêu hóa & Gan mật">Tiêu hóa & Nội soi can thiệp</option>
+                        <option value="Sản - Phụ khoa">Sản - Phụ khoa & Chẩn đoán trước sinh</option>
+                        <option value="Chẩn đoán hình ảnh">Chẩn đoán hình ảnh cao cấp (MRI/CT)</option>
+                        <option value="Khám tổng quát & Tầm soát">Khám sức khỏe tổng quát & Tầm soát</option>
+                      </select>
+                      <span class="field-error" id="specialtyError">Vui lòng chọn chuyên khoa phù hợp.</span>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="doctorSelect" class="field-label">
+                        Bác sĩ chuyên khoa mong muốn (tùy chọn)
+                      </label>
+                      <select id="doctorSelect" name="doctorSelect" class="field-input field-select">
+                        <option value="">Bệnh viện sắp xếp chuyên gia phù hợp</option>
+                        <option value="PGS. TS. BS. Trần Văn Minh">PGS. TS. BS. Trần Văn Minh (Tim mạch)</option>
+                        <option value="TS. BS. Trần Thu Trang">TS. BS. Trần Thu Trang (Ung bướu)</option>
+                        <option value="ThS. BS. CKII. Trần Đức Huy">ThS. BS. CKII. Trần Đức Huy (Cột sống)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Consultation Mode Selection -->
+                  <div class="form-field">
+                    <span class="field-label">Hình thức thăm khám</span>
+                    <div class="consultation-mode-toggle" role="radiogroup" aria-label="Hình thức khám">
+                      <label class="mode-chip">
+                        <input type="radio" name="consultationMode" value="in-person" checked />
+                        <div class="mode-box">
+                          <span class="mode-icon" aria-hidden="true">🏥</span>
+                          <div class="mode-text">
+                            <strong>Khám trực tiếp tại Campus Sala</strong>
+                            <span class="mode-sub">Tiếp đón ưu tiên tại sảnh VIP, cận lâm sàng kỹ thuật cao</span>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label class="mode-chip">
+                        <input type="radio" name="consultationMode" value="telehealth" />
+                        <div class="mode-box">
+                          <span class="mode-icon" aria-hidden="true">💻</span>
+                          <div class="mode-text">
+                            <strong>Tư vấn Telehealth từ xa</strong>
+                            <span class="mode-sub">Tư vấn qua video trực tuyến bảo mật, kê đơn điện tử</span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Fieldset 3: Appointment Date & Time -->
+                <fieldset class="form-fieldset">
+                  <legend class="fieldset-header">
+                    <span class="step-index-chip">BƯỚC 3</span>
+                    <span class="step-title-text">Lịch hẹn & Khung giờ mong muốn</span>
+                  </legend>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="appointmentDate" class="field-label">
+                        Ngày khám dự kiến <span class="required-star">*</span>
+                      </label>
+                      <input 
+                        type="date" 
+                        id="appointmentDate" 
+                        name="appointmentDate" 
+                        class="field-input" 
+                        required 
+                      />
+                      <span class="field-error" id="dateError">Vui lòng chọn ngày khám hợp lệ (từ ngày mai trở đi).</span>
+                    </div>
+
+                    <div class="form-field">
+                      <span class="field-label">Khung giờ tiếp đón ưu tiên</span>
+                      <div class="segmented-time-picker" role="radiogroup" aria-label="Khung giờ khám">
+                        <label class="time-chip">
+                          <input type="radio" name="preferredTimeSlot" value="morning" checked />
+                          <div class="chip-box">
+                            <span class="chip-period">Sáng</span>
+                            <span class="chip-hours">08:00 - 11:30</span>
+                          </div>
+                        </label>
+
+                        <label class="time-chip">
+                          <input type="radio" name="preferredTimeSlot" value="afternoon" />
+                          <div class="chip-box">
+                            <span class="chip-period">Chiều</span>
+                            <span class="chip-hours">13:30 - 16:30</span>
+                          </div>
+                        </label>
+
+                        <label class="time-chip">
+                          <input type="radio" name="preferredTimeSlot" value="evening" />
+                          <div class="chip-box">
+                            <span class="chip-period">Ngoài giờ</span>
+                            <span class="chip-hours">17:00 - 19:30</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="patientNotes" class="field-label">
+                      Mô tả triệu chứng hoặc yêu cầu đặc biệt (tùy chọn)
+                    </label>
+                    <textarea 
+                      id="patientNotes" 
+                      name="patientNotes" 
+                      class="field-input" 
+                      rows="2" 
+                      placeholder="Ví dụ: Đau thắt ngực khi gắng sức, đã có kết quả xét nghiệm cũ, cần hỗ trợ thông dịch tiếng Anh..."
+                    ></textarea>
+                  </div>
+                </fieldset>
+
+                <!-- Fieldset 4: Consent & Submission -->
+                <div class="form-submit-block">
+                  <label class="custom-checkbox-container">
+                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required checked />
+                    <span class="checkbox-text">
+                      Tôi đồng ý để Bệnh viện Đa khoa Quốc tế ALIVIA xử lý dữ liệu cá nhân theo quy định của 
+                      Nghị định 13/2023/NĐ-CP phục vụ mục đích điều phối thăm khám và liên hệ xác nhận lịch hẹn.
+                    </span>
+                  </label>
+                  <span class="field-error" id="consentError" style="margin-top: 4px;">
+                    Vui lòng tích chọn đồng ý với chính sách xử lý dữ liệu y tế.
+                  </span>
+
+                  <div class="concierge-disclaimer-card" style="margin-top: var(--space-4);">
+                    <span class="disclaimer-icon" aria-hidden="true">ℹ️</span>
+                    <span>
+                      Sau khi quý khách gửi thông tin, điều phối viên y khoa ALIVIA sẽ gọi điện thoại xác nhận trong vòng 15 phút 
+                      (giờ làm việc 07:00 - 20:00) và hướng dẫn chuẩn bị chi tiết trước khi khám.
+                    </span>
+                  </div>
+
+                  <div class="submit-action-row" style="margin-top: var(--space-5);">
+                    <button type="submit" class="btn btn-primary btn-block btn-submit-concierge" id="submitBookingBtn">
+                      <span class="btn-text-label">Xác nhận gửi yêu cầu đặt lịch hẹn</span>
+                      <span class="spinner" id="bookingSpinner" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONFIRMATION RECEIPT MODAL -->
+    <div class="modal-backdrop" id="bookingConfirmationModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalConfirmationTitle">
+      <div class="modal-card">
+        <div class="modal-icon-badge" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3 class="modal-title" id="modalConfirmationTitle">Tiếp Nhận Y Cầu Đặt Lịch Thành Công</h3>
+        <p class="modal-sub">
+          Cảm ơn quý khách đã tin chọn Bệnh viện Đa khoa Quốc tế ALIVIA. Điều phối viên y khoa đang xử lý hồ sơ và sẽ liên hệ xác nhận trong vòng 15 phút.
+        </p>
+
+        <div class="receipt-card">
+          <div class="receipt-row">
+            <span class="receipt-label">Mã tiếp nhận ưu tiên:</span>
+            <strong class="receipt-code" id="receiptCode">ALV-892415</strong>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label">Người khám:</span>
+            <span class="receipt-val" id="receiptPatientName">Nguyễn Văn An</span>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label">Chuyên khoa:</span>
+            <span class="receipt-val" id="receiptSpecialty">Tim mạch Can thiệp</span>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label">Ngày dự kiến:</span>
+            <span class="receipt-val" id="receiptDate">23/10/2026</span>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-label">Khung giờ:</span>
+            <span class="receipt-val" id="receiptTime">Buổi sáng (08:00 - 11:30)</span>
+          </div>
+        </div>
+
+        <div class="modal-action-row">
+          <button type="button" class="btn btn-primary btn-block" id="modalCloseBtn">
+            Đã hiểu & Hoàn tất
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHARED SITE FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-col footer-col-brand">
+            <div class="footer-brand-logo">
+              <span class="brand-monogram-footer" aria-hidden="true">A</span>
+              <span class="footer-brand-title">ALIVIA HOSPITAL</span>
+            </div>
+            <p class="footer-brand-tagline">
+              Bệnh viện Đa khoa Quốc tế chuẩn JCI Hoa Kỳ. Chuẩn mực y khoa hàn lâm và không gian chữa lành nhân văn.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Chuyên khoa mũi nhọn</h4>
+            <ul class="footer-nav-list">
+              <li><a href="/chuyen-khoa/tim-mach/">Trung tâm Tim mạch Can thiệp</a></li>
+              <li><a href="/chuyen-khoa/">Trung tâm Ung bướu & Miễn dịch</a></li>
+              <li><a href="/chuyen-khoa/">Khoa Ngoại Thần kinh & Cột sống</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Hành trình người bệnh</h4>
+            <ul class="footer-nav-list">
+              <li><a href="/huong-dan-kham/">Quy trình tiếp đón & Thăm khám</a></li>
+              <li><a href="/huong-dan-kham/">Bảo lãnh viện phí trực tiếp</a></li>
+              <li><a href="/dat-lich-kham/">Đặt lịch khám ưu tiên</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col-contact">
+            <h4 class="footer-col-title">Liên hệ & Cấp cứu 24/7</h4>
+            <div class="footer-contact-item">
+              <span class="contact-label">Hotline Tổng đài:</span>
+              <a href="tel:19006868" class="contact-val phone-highlight">1900 6868</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 Bệnh Viện Đa Khoa Quốc Tế Alivia. Bảo lưu mọi quyền.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
