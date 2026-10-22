@@ -521,6 +521,7 @@ ul {
   gap: var(--space-3);
 }
 
+.nav-link-subtle,
 .btn-portal {
   display: inline-flex;
   align-items: center;
@@ -528,14 +529,15 @@ ul {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-slate);
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-canvas-alt);
+  background: transparent;
   transition: all var(--transition-fast);
 }
 
+.nav-link-subtle:hover,
 .btn-portal:hover {
-  background-color: var(--color-blue-soft);
+  background-color: var(--color-canvas);
   color: var(--color-blue-medical);
 }
 
@@ -740,8 +742,27 @@ ul {
 .hero-cta-group {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-5);
   margin-bottom: var(--space-10);
+}
+
+.btn-editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-medium);
+  color: var(--color-ink);
+  padding: 10px 14px;
+  transition: all var(--transition-fast);
+  border-bottom: 1.5px solid transparent;
+}
+
+.btn-editorial-link:hover {
+  color: var(--color-blue-medical);
+  border-bottom-color: var(--color-blue-medical);
+  transform: translateX(3px);
 }
 
 /* Hero Stats Hairline Strip */
@@ -1034,6 +1055,20 @@ ul {
   color: var(--color-ink);
   line-height: var(--leading-subtitle);
   margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-arrow {
+  color: var(--color-gold-champagne);
+  font-size: 1.125rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.intent-card:hover .card-arrow {
+  transform: translateX(4px);
+  color: var(--color-ink);
 }
 
 .intent-card-desc {
@@ -1041,24 +1076,12 @@ ul {
   font-size: var(--text-ui);
   color: var(--color-slate);
   line-height: 1.55;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-2);
   flex-grow: 1;
 }
 
 .intent-cta-label {
-  font-family: var(--font-ui);
-  font-size: var(--text-caption);
-  font-weight: var(--weight-semibold);
-  color: var(--color-blue-medical);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: auto;
-  transition: color var(--transition-fast);
-}
-
-.intent-card:hover .intent-cta-label {
-  color: var(--color-ink);
+  display: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -1171,7 +1194,7 @@ ul {
   background-color: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-3) var(--space-5);
   margin-bottom: var(--space-8);
   display: flex;
   align-items: center;
@@ -1203,28 +1226,23 @@ ul {
 .symptom-pill {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
   font-family: var(--font-ui);
   font-size: var(--text-caption);
   font-weight: var(--weight-medium);
   color: var(--color-charcoal);
   background-color: var(--color-canvas);
   border: 1px solid var(--color-border);
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .symptom-pill:hover {
-  background-color: var(--color-blue-soft);
-  color: var(--color-blue-medical);
-  border-color: var(--color-blue-medical);
+  background-color: var(--color-ink);
+  color: #FFFFFF;
+  border-color: var(--color-ink);
   transform: translateY(-1px);
-}
-
-.symptom-emoji {
-  font-size: 0.875rem;
 }
 
 .second-opinion-ribbon {
@@ -1578,6 +1596,51 @@ ul {
   color: var(--color-slate);
   margin-bottom: var(--space-4);
   line-height: var(--leading-normal);
+}
+
+.doctor-credential-strip {
+  padding: var(--space-2) 0 var(--space-4);
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.doctor-spec-point {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  line-height: var(--leading-normal);
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.doctor-spec-point .spec-dot {
+  color: var(--color-gold-champagne);
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.doctor-schedule-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.78125rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-slate);
+  background-color: var(--color-canvas);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.doctor-schedule-pill svg {
+  color: var(--color-blue-medical);
 }
 
 .doctor-credentials-list {
@@ -2563,17 +2626,20 @@ ul {
   display: flex;
   flex-direction: column;
   transition: all var(--transition-fast);
-}
-
-.package-column:hover {
-  border-color: var(--color-border-dark);
   box-shadow: var(--shadow-subtle);
 }
 
+.package-column:hover {
+  border-color: var(--color-ink);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
 .package-featured {
-  border: 1.5px solid var(--color-ink);
+  border: 1.5px solid var(--color-gold-champagne);
   box-shadow: var(--shadow-card);
   position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
 }
 
 .pkg-tier {
@@ -3515,6 +3581,7 @@ ul {
 
   .nav-links-desktop,
   .btn-portal,
+  .nav-link-subtle,
   .nav-cta-booking {
     display: none;
   }

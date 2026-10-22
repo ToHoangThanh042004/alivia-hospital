@@ -70,8 +70,8 @@
           </div>
 
           <div class="nav-actions">
-            <a href="#dat-lich" class="btn-portal" id="btn-result-portal">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <a href="#dat-lich" class="nav-link-subtle" id="btn-result-portal">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
               <span>Tra cứu hồ sơ</span>
             </a>
             <a href="#dat-lich" class="btn btn-primary nav-cta-booking">
@@ -144,12 +144,13 @@
               </p>
 
               <div class="hero-cta-group">
-                <a href="#nhu-cau-kham" class="btn btn-primary btn-hero">
-                  <span>Khám phá dịch vụ</span>
+                <a href="#dat-lich" class="btn btn-primary btn-hero">
+                  <span>Đặt lịch khám ưu tiên</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <a href="#dat-lich" class="btn btn-outline btn-hero">
-                  <span>Đặt lịch khám</span>
+                <a href="#chuyen-khoa" class="btn-editorial-link">
+                  <span>Khám phá chuyên khoa</span>
+                  <span aria-hidden="true">→</span>
                 </a>
               </div>
 
@@ -249,39 +250,39 @@
       <section class="patient-intent-section" id="nhu-cau-kham" aria-labelledby="intent-title">
         <div class="container">
           <div class="intent-header">
-            <span class="section-kicker">ĐIỀU HƯỚNG NHU CẦU NGƯỜI BỆNH</span>
+            <span class="section-kicker">ĐIỀU HƯỚNG NHU CẦU</span>
             <h2 id="intent-title" class="intent-heading">
               Hôm nay, bạn cần chúng tôi hỗ trợ điều gì?
             </h2>
             <p class="intent-sub">
-              Lựa chọn đúng nhu cầu giúp chúng tôi kết nối bạn đến đúng chuyên gia và dịch vụ chăm sóc thích hợp nhất.
+              Lựa chọn đúng nhu cầu giúp chúng tôi kết nối bạn đến đúng chuyên gia và dịch vụ phù hợp nhất.
             </p>
           </div>
 
-          <!-- Symptom-Guided Navigator -->
+          <!-- Symptom-Guided Navigator (Calm Editorial Filter) -->
           <div class="symptom-navigator-bar">
             <div class="symptom-nav-label">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <span>Gợi ý theo triệu chứng thường gặp:</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>Gợi ý theo triệu chứng:</span>
             </div>
             <div class="symptom-pills-list">
               <button type="button" class="symptom-pill" data-specialty="Tim mạch Can thiệp" data-doctor="PGS. TS. BS. Trần Văn Minh" data-note="Đau thắt ngực khi gắng sức, hồi hộp, khó thở">
-                <span class="symptom-emoji">🫀</span> Đau ngực & Hồi hộp
+                Đau ngực & Hồi hộp
               </button>
               <button type="button" class="symptom-pill" data-specialty="Ung bướu & Miễn dịch" data-doctor="TS. BS. Trần Thu Trang" data-note="Tầm soát u cục, hạch cổ bất thường, sụt cân không rõ nguyên nhân">
-                <span class="symptom-emoji">🎗️</span> Tầm soát U cục & Hạch
+                Tầm soát U cục & Hạch
               </button>
               <button type="button" class="symptom-pill" data-specialty="Cơ Xương Khớp & Thần kinh" data-doctor="ThS. BS. CKII. Trần Đức Huy" data-note="Đau thắt lưng lan xuống chân, tê bì ngón tay, đau mỏi cột sống">
-                <span class="symptom-emoji">🦴</span> Đau lưng & Cột sống
+                Đau lưng & Cột sống
               </button>
               <button type="button" class="symptom-pill" data-specialty="Tiêu hóa & Gan mật" data-note="Đau thượng vị, trào ngược thực quản, đầy bụng khó tiêu">
-                <span class="symptom-emoji">🩺</span> Tiêu hóa & Trào ngược
+                Tiêu hóa & Trào ngược
               </button>
               <button type="button" class="symptom-pill" data-specialty="Thần kinh & Đột quỵ" data-note="Chóng mặt dữ dội, đau nửa đầu, tê yếu nửa người thoáng qua">
-                <span class="symptom-emoji">🧠</span> Chóng mặt & Đau đầu
+                Chóng mặt & Đau đầu
               </button>
               <button type="button" class="symptom-pill" data-specialty="Sản - Phụ khoa" data-note="Khám thai kỳ định kỳ, tầm soát dị tật di truyền NIPT, bệnh lý phụ khoa">
-                <span class="symptom-emoji">🤰</span> Thai kỳ & Phụ khoa
+                Thai kỳ & Phụ khoa
               </button>
             </div>
           </div>
@@ -293,9 +294,11 @@
               <div class="intent-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
-              <h3 class="intent-card-title">Tìm bác sĩ chuyên khoa</h3>
-              <p class="intent-card-desc">Tra cứu học vị, kinh nghiệm và lịch thăm khám của các Giáo sư, Tiến sĩ y khoa đầu ngành.</p>
-              <span class="intent-cta-label">Xem danh sách chuyên gia →</span>
+              <h3 class="intent-card-title">
+                Tìm bác sĩ chuyên khoa
+                <span class="card-arrow" aria-hidden="true">→</span>
+              </h3>
+              <p class="intent-card-desc">Tra cứu học vị và lịch khám của các Giáo sư, Tiến sĩ y khoa đầu ngành.</p>
             </a>
 
             <!-- Intent 2: Explore Specialties -->
@@ -304,9 +307,11 @@
               <div class="intent-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
               </div>
-              <h3 class="intent-card-title">Chọn chuyên khoa khám</h3>
-              <p class="intent-card-desc">Khám phá các trung tâm chuyên khoa sâu: Tim mạch, Ung bướu, Sản phụ khoa, Thần kinh...</p>
-              <span class="intent-cta-label">Khám phá 45+ chuyên khoa →</span>
+              <h3 class="intent-card-title">
+                Chọn chuyên khoa khám
+                <span class="card-arrow" aria-hidden="true">→</span>
+              </h3>
+              <p class="intent-card-desc">Khám phá 45+ chuyên khoa sâu: Tim mạch, Ung bướu, Sản phụ, Thần kinh...</p>
             </a>
 
             <!-- Intent 3: Book Appointment -->
@@ -315,9 +320,11 @@
               <div class="intent-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               </div>
-              <h3 class="intent-card-title">Đặt lịch khám trực tuyến</h3>
-              <p class="intent-card-desc">Chủ động ngày giờ khám, không phải chờ đợi. Thư ký Y khoa gọi điện xác nhận trong 15 phút.</p>
-              <span class="intent-cta-label">Mở phiếu đặt hẹn ngay →</span>
+              <h3 class="intent-card-title">
+                Đặt lịch khám trực tuyến
+                <span class="card-arrow" aria-hidden="true">→</span>
+              </h3>
+              <p class="intent-card-desc">Chủ động ngày giờ khám, không phải chờ đợi. Xác nhận nhanh trong 15 phút.</p>
             </a>
 
             <!-- Intent 4: Checkup Packages -->
@@ -326,24 +333,26 @@
               <div class="intent-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
               </div>
-              <h3 class="intent-card-title">Tìm hiểu gói khám sức khỏe</h3>
-              <p class="intent-card-desc">Chương trình tầm soát toàn diện theo từng lứa tuổi: Tiêu chuẩn, Chuyên sâu Executive, VIP Platinum.</p>
-              <span class="intent-cta-label">Xem bảng giá minh bạch →</span>
+              <h3 class="intent-card-title">
+                Gói tầm soát sức khỏe
+                <span class="card-arrow" aria-hidden="true">→</span>
+              </h3>
+              <p class="intent-card-desc">Chương trình tầm soát toàn diện: Tiêu chuẩn, Chuyên sâu Executive, VIP Platinum.</p>
             </a>
           </div>
 
           <!-- Second Opinion Concierge Ribbon -->
           <div class="second-opinion-ribbon">
             <div class="ribbon-left">
-              <span class="ribbon-tag">DỊCH VỤ Y HỌC ĐẶC BIỆT</span>
-              <h3 class="ribbon-title">Hội đồng Ý kiến Y khoa Thứ hai (Second Opinion Concierge)</h3>
+              <span class="ribbon-tag">DỊCH VỤ ĐẶC BIỆT</span>
+              <h3 class="ribbon-title">Hội đồng Ý kiến Y khoa Thứ hai (Second Opinion)</h3>
               <p class="ribbon-desc">
-                Bạn đã được chẩn đoán tại bệnh viện khác và cần thẩm định lại phác đồ trước phẫu thuật hoặc can thiệp phức tạp? Hội đồng chuyên gia Heart Team & Tumor Board tại Alivia sẵn sàng hội chẩn độc lập để mang đến sự an tâm tuyệt đối cho bạn.
+                Bạn đã có chẩn đoán tại bệnh viện khác và cần thẩm định lại phác đồ trước phẫu thuật hoặc can thiệp? Hội đồng Heart Team & Tumor Board tại Alivia sẵn sàng hội chẩn độc lập để mang đến sự an tâm tuyệt đối.
               </p>
             </div>
             <div class="ribbon-right">
               <button type="button" class="btn btn-outline btn-second-opinion" id="btnSecondOpinion">
-                <span>Gửi hồ sơ nhận Ý kiến Thứ hai</span>
+                <span>Gửi hồ sơ thẩm định phác đồ</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
@@ -355,38 +364,37 @@
       <section class="section specialties-section" id="chuyen-khoa">
         <div class="container">
           <div class="section-header-editorial">
-            <span class="section-kicker">NĂNG LỰC Y KHOA CHUYÊN SÂU</span>
+            <span class="section-kicker">NĂNG LỰC CHUYÊN SÂU</span>
             <h2 class="section-title">Trung tâm chuyên khoa chuẩn mực quốc tế</h2>
             <p class="section-desc">
-              Được tổ chức theo mô hình liên chuyên khoa khép kín, Alivia tối ưu hóa thời gian chẩn đoán, cá thể hóa phác đồ và giảm thiểu tối đa xâm lấn cho người bệnh.
+              Mô hình liên chuyên khoa khép kín giúp tối ưu hóa chẩn đoán, cá thể hóa phác đồ và giảm thiểu can thiệp xâm lấn cho người bệnh.
             </p>
           </div>
 
           <!-- Featured Center Spotlight -->
           <div class="center-spotlight-card">
             <div class="spotlight-content">
-              <span class="spotlight-tag">TRUNG TÂM MŨI NHỌN TIÊU BIỂU</span>
-              <h3 class="spotlight-title">Trung Tâm Tim Mạch & Can Thiệp Mạch Máu Quốc Tế</h3>
+              <span class="spotlight-tag">TRUNG TÂM TIÊU BIỂU</span>
+              <h3 class="spotlight-title">Trung Tâm Tim Mạch & Can Thiệp Mạch Máu</h3>
               <p class="spotlight-desc">
-                Trang bị hệ thống chụp mạch can thiệp kỹ thuật số xoá nền (DSA Philips Azurion) kết hợp phòng mổ Hybrid áp lực dương. Chúng tôi thực hiện thành công các kỹ thuật đặt stent mạch vành phức tạp, can thiệp van tim qua da (TAVI), và điều trị loạn nhịp tim với độ an toàn vượt trội.
+                Trang bị hệ thống chụp mạch can thiệp kỹ thuật số DSA Philips Azurion và phòng mổ Hybrid áp lực dương, thực hiện can thiệp mạch vành và van tim qua da với độ an toàn vượt trội.
               </p>
               <ul class="spotlight-features">
                 <li>
                   <span class="feature-bullet" aria-hidden="true">—</span>
-                  <span>Quy trình can thiệp nhồi máu cơ tim cấp <strong>"Door-to-Balloon" dưới 45 phút</strong>.</span>
+                  <span>Cấp cứu nhồi máu cơ tim "Door-to-Balloon" dưới 45 phút.</span>
                 </li>
                 <li>
                   <span class="feature-bullet" aria-hidden="true">—</span>
-                  <span>Hội chẩn <strong>Heart Team</strong> đa ngành giữa chuyên gia Tim mạch Can thiệp & Phẫu thuật Lồng ngực.</span>
+                  <span>Hội đồng Heart Team đa ngành thẩm định từng phác đồ.</span>
                 </li>
                 <li>
                   <span class="feature-bullet" aria-hidden="true">—</span>
-                  <span>Chương trình phục hồi chức năng tim mạch nội trú chuẩn Hội Tim Mạch Hoa Kỳ (AHA).</span>
+                  <span>Phục hồi chức năng tim mạch nội trú chuẩn Hội Tim Mạch Hoa Kỳ (AHA).</span>
                 </li>
               </ul>
               <div class="spotlight-action">
                 <button type="button" class="btn btn-primary btn-select-specialty" data-specialty="Tim mạch Can thiệp">Đặt hẹn khoa Tim Mạch</button>
-                <a href="#quy-trinh" class="btn btn-text">Tìm hiểu quy trình tiếp nhận →</a>
               </div>
             </div>
             <div class="spotlight-stats-panel">
@@ -402,7 +410,7 @@
               <div class="spotlight-metric-divider" aria-hidden="true"></div>
               <div class="spotlight-metric">
                 <span class="metric-val">10.000+</span>
-                <span class="metric-txt">Ca can thiệp tim mạch an toàn thực hiện thành công</span>
+                <span class="metric-txt">Ca can thiệp an toàn thực hiện thành công</span>
               </div>
             </div>
           </div>
@@ -415,9 +423,9 @@
                 <h4 class="spec-heading">Ung Bướu & Miễn Dịch Học</h4>
               </div>
               <p class="spec-summary">
-                Liệu pháp nhắm trúng đích, miễn dịch sinh học và hội chẩn Tumor Board cùng chuyên gia Viện Curie (Pháp), tối ưu hóa hiệu quả điều trị và hạn chế tác dụng phụ.
+                Liệu pháp nhắm trúng đích, miễn dịch sinh học và hội đồng Tumor Board liên viện, tối ưu hóa hiệu quả điều trị và giảm tác dụng phụ.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Ung bướu & Miễn dịch">Đặt lịch khoa Ung Bướu →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Ung bướu & Miễn dịch">Đặt lịch khám →</button>
             </div>
 
             <div class="spec-item">
@@ -426,9 +434,9 @@
                 <h4 class="spec-heading">Sản Phụ Khoa & Y Học Bào Thai</h4>
               </div>
               <p class="spec-summary">
-                Quản lý thai kỳ nguy cơ cao, tầm soát dị tật di truyền sớm từ tuần thứ 10 bằng NIPT và siêu âm hình thái 4D chuẩn GE Healthcare Voluson E10.
+                Quản lý thai kỳ nguy cơ cao, tầm soát dị tật di truyền sớm từ tuần thứ 10 bằng NIPT và siêu âm hình thái 4D chuẩn GE Healthcare.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Sản - Phụ khoa">Đặt lịch khoa Sản Phụ →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Sản - Phụ khoa">Đặt lịch khám →</button>
             </div>
 
             <div class="spec-item">
@@ -437,9 +445,9 @@
                 <h4 class="spec-heading">Cơ Xương Khớp & Phẫu Thuật Cột Sống</h4>
               </div>
               <p class="spec-summary">
-                Phẫu thuật nội soi ít xâm lấn (MIS), thay khớp háng/khớp gối kỹ thuật cao, kết hợp vật lý trị liệu phục hồi chức năng giúp người bệnh vận động sớm sau 24h.
+                Phẫu thuật nội soi ít xâm lấn (MIS), thay khớp kỹ thuật cao kết hợp vật lý trị liệu giúp người bệnh vận động sớm sau 24h.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Cơ Xương Khớp & Thần kinh">Đặt lịch khoa Cột Sống →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Cơ Xương Khớp & Thần kinh">Đặt lịch khám →</button>
             </div>
 
             <div class="spec-item">
@@ -448,9 +456,9 @@
                 <h4 class="spec-heading">Nội Soi Tiêu Hóa & Gan Mật</h4>
               </div>
               <p class="spec-summary">
-                Hệ thống nội soi phóng đại nhuộm màu điện tử Olympus EVIS X1 phát hiện tiền ung thư sớm, thủ thuật nội soi êm dịu không đau và vô trùng tuyệt đối.
+                Hệ thống nội soi nhuộm màu phóng đại Olympus EVIS X1 tầm soát tiền ung thư sớm, thực hiện êm ái, nhẹ nhàng và an toàn.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Tiêu hóa & Gan mật">Đặt lịch khoa Tiêu Hóa →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Tiêu hóa & Gan mật">Đặt lịch khám →</button>
             </div>
 
             <div class="spec-item">
@@ -459,9 +467,9 @@
                 <h4 class="spec-heading">Chẩn Đoán Hình Ảnh Kỹ Thuật Cao</h4>
               </div>
               <p class="spec-summary">
-                Cộng hưởng từ MRI 3.0T Biomatrix, Chụp cắt lớp vi tính CT 512 lát cắt giảm 82% liều tia X, nhũ ảnh 3D kỹ thuật số Tomosynthesis phát hiện tổn thương vi thể từ 2mm.
+                Cộng hưởng từ MRI 3.0T Biomatrix, CT 512 lát cắt liều thấp và nhũ ảnh 3D Tomosynthesis phát hiện tổn thương vi thể từ 2mm.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Chẩn đoán hình ảnh">Đặt lịch Chẩn Đoán Hình Ảnh →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Chẩn đoán hình ảnh">Đặt lịch khám →</button>
             </div>
 
             <div class="spec-item">
@@ -470,9 +478,9 @@
                 <h4 class="spec-heading">Thần Kinh & Can Thiệp Đột Quỵ 24/7</h4>
               </div>
               <p class="spec-summary">
-                Đơn vị cấp cứu đột quỵ đạt tiêu chuẩn Kim Cương (Diamond WSO), can thiệp lấy huyết khối cơ học bằng dụng cụ trong khung giờ vàng dưới 6 giờ.
+                Đơn vị cấp cứu đột quỵ chuẩn Diamond WSO, can thiệp lấy huyết khối cơ học bằng dụng cụ chuyên dụng trong khung giờ vàng dưới 6 giờ.
               </p>
-              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Thần kinh & Đột quỵ">Đặt lịch khoa Thần Kinh →</button>
+              <button type="button" class="spec-action-btn btn-select-specialty" data-specialty="Thần kinh & Đột quỵ">Đặt lịch khám →</button>
             </div>
           </div>
         </div>
@@ -482,10 +490,10 @@
       <section class="section doctors-section" id="doi-ngu-bac-si">
         <div class="container">
           <div class="section-header-editorial">
-            <span class="section-kicker">ĐỘI NGŨ CHUYÊN GIA ĐẦU NGÀNH</span>
+            <span class="section-kicker">CHUYÊN GIA ĐẦU NGÀNH</span>
             <h2 class="section-title">Tinh hoa y thuật & sự thấu cảm</h2>
             <p class="section-desc">
-              100% bác sĩ tại Alivia đều có học vị từ Tiến sĩ, Bác sĩ Chuyên khoa II, từng giữ các cương vị chủ chốt tại các bệnh viện tuyến trung ương và thường xuyên tu nghiệp tại Hoa Kỳ, Pháp, Nhật Bản.
+              100% bác sĩ có học vị Tiến sĩ, Bác sĩ Chuyên khoa II, từng giữ các cương vị chủ chốt tại các bệnh viện trung ương và tu nghiệp tại Hoa Kỳ, Pháp, Nhật Bản.
             </p>
           </div>
 
@@ -504,25 +512,21 @@
                 <div class="doctor-exp-badge">30+ năm kinh nghiệm</div>
               </div>
               <div class="doctor-meta-block">
-                <div class="doctor-specialty-kicker">CHUYÊN GIA TIM MẠCH CAN THIỆP</div>
+                <div class="doctor-specialty-kicker">TIM MẠCH CAN THIỆP</div>
                 <h3 class="doctor-name">PGS. TS. BS. Trần Văn Minh</h3>
                 <p class="doctor-position">Giám đốc Y khoa — Nguyên Trưởng khoa Tim mạch BV Chợ Rẫy</p>
-                <div class="doctor-credentials-list">
-                  <div class="cred-row">
-                    <span class="cred-label">Đào tạo:</span>
-                    <span class="cred-val">Tiến sĩ Y khoa (ĐH Y Dược), Tu nghiệp Viện Tim Paris (Pháp)</span>
+                <div class="doctor-credential-strip">
+                  <div class="doctor-spec-point">
+                    <span class="spec-dot" aria-hidden="true">•</span>
+                    <span>Tiến sĩ Y khoa (ĐH Y Dược) • Tu nghiệp Viện Tim Paris</span>
                   </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Ngôn ngữ:</span>
-                    <span class="cred-val">Tiếng Việt, Tiếng Anh, Tiếng Pháp</span>
-                  </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Lịch khám:</span>
-                    <span class="cred-val">Thứ 2, Thứ 4, Thứ 6 (08:00 - 16:30)</span>
+                  <div class="doctor-schedule-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Lịch khám: Thứ 2, Thứ 4, Thứ 6</span>
                   </div>
                 </div>
                 <button type="button" class="btn btn-outline btn-block btn-book-doctor" data-doctor="PGS. TS. BS. Trần Văn Minh" data-specialty="Tim mạch Can thiệp">
-                  Đặt lịch với PGS. Trần Văn Minh
+                  Đặt lịch khám
                 </button>
               </div>
             </div>
@@ -541,25 +545,21 @@
                 <div class="doctor-exp-badge">22+ năm kinh nghiệm</div>
               </div>
               <div class="doctor-meta-block">
-                <div class="doctor-specialty-kicker">CHUYÊN GIA UNG BƯỚU & MIỄN DỊCH</div>
+                <div class="doctor-specialty-kicker">UNG BƯỚU & MIỄN DỊCH</div>
                 <h3 class="doctor-name">TS. BS. Trần Thu Trang</h3>
-                <p class="doctor-position">Trưởng Trung tâm Ung Bướu — Thành viên Hiệp hội Ung thư Hoa Kỳ (ASCO)</p>
-                <div class="doctor-credentials-list">
-                  <div class="cred-row">
-                    <span class="cred-label">Đào tạo:</span>
-                    <span class="cred-val">Tiến sĩ Ung bướu học, Tu nghiệp Viện Curie (Paris, Pháp)</span>
+                <p class="doctor-position">Trưởng Trung tâm Ung Bướu — Thành viên Hội Ung thư Hoa Kỳ (ASCO)</p>
+                <div class="doctor-credential-strip">
+                  <div class="doctor-spec-point">
+                    <span class="spec-dot" aria-hidden="true">•</span>
+                    <span>Tiến sĩ Ung bướu • Tu nghiệp Viện Curie (Paris)</span>
                   </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Ngôn ngữ:</span>
-                    <span class="cred-val">Tiếng Việt, Tiếng Anh, Tiếng Pháp</span>
-                  </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Lịch khám:</span>
-                    <span class="cred-val">Thứ 3, Thứ 5, Thứ 7 (08:00 - 16:30)</span>
+                  <div class="doctor-schedule-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Lịch khám: Thứ 3, Thứ 5, Thứ 7</span>
                   </div>
                 </div>
                 <button type="button" class="btn btn-outline btn-block btn-book-doctor" data-doctor="TS. BS. Trần Thu Trang" data-specialty="Ung bướu & Miễn dịch">
-                  Đặt lịch với TS. Trần Thu Trang
+                  Đặt lịch khám
                 </button>
               </div>
             </div>
@@ -578,34 +578,29 @@
                 <div class="doctor-exp-badge">18+ năm kinh nghiệm</div>
               </div>
               <div class="doctor-meta-block">
-                <div class="doctor-specialty-kicker">CHUYÊN GIA PHẪU THUẬT CỘT SỐNG & MIS</div>
+                <div class="doctor-specialty-kicker">PHẪU THUẬT CỘT SỐNG & MIS</div>
                 <h3 class="doctor-name">ThS. BS. CKII. Trần Đức Huy</h3>
                 <p class="doctor-position">Trưởng khoa Ngoại Thần kinh & Phẫu thuật Cột sống ít xâm lấn</p>
-                <div class="doctor-credentials-list">
-                  <div class="cred-row">
-                    <span class="cred-label">Đào tạo:</span>
-                    <span class="cred-val">Bác sĩ CKII, Tu nghiệp Phẫu thuật Cột sống tại Đại học Tokyo (Nhật Bản)</span>
+                <div class="doctor-credential-strip">
+                  <div class="doctor-spec-point">
+                    <span class="spec-dot" aria-hidden="true">•</span>
+                    <span>Bác sĩ CKII • Tu nghiệp Cột sống ĐH Tokyo (Nhật Bản)</span>
                   </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Ngôn ngữ:</span>
-                    <span class="cred-val">Tiếng Việt, Tiếng Anh, Tiếng Nhật</span>
-                  </div>
-                  <div class="cred-row">
-                    <span class="cred-label">Lịch khám:</span>
-                    <span class="cred-val">Thứ 2 đến Thứ 6 (08:30 - 17:00)</span>
+                  <div class="doctor-schedule-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Lịch khám: Thứ 2 đến Thứ 6</span>
                   </div>
                 </div>
                 <button type="button" class="btn btn-outline btn-block btn-book-doctor" data-doctor="ThS. BS. CKII. Trần Đức Huy" data-specialty="Cơ Xương Khớp & Thần kinh">
-                  Đặt lịch với BS. Trần Đức Huy
+                  Đặt lịch khám
                 </button>
               </div>
             </div>
           </div>
 
           <div class="editorial-trust-strip">
-            <span class="trust-icon" aria-hidden="true">⚖️</span>
             <p>
-              <strong>Cam kết thời gian tư vấn:</strong> Bác sĩ chuyên khoa tại Alivia dành tối thiểu 20 - 30 phút cho mỗi lượt thăm khám để lắng nghe, giải thích cặn kẽ bệnh học và xây dựng phác đồ điều trị đồng thuận cùng người bệnh.
+              <strong>Cam kết thời gian tư vấn:</strong> Bác sĩ chuyên khoa tại Alivia dành tối thiểu 20–30 phút cho mỗi lượt thăm khám để lắng nghe, giải thích cặn kẽ bệnh học và xây dựng phác đồ đồng thuận cùng người bệnh.
             </p>
           </div>
         </div>
@@ -769,10 +764,10 @@
       <section class="section packages-section" id="goi-kham">
         <div class="container">
           <div class="section-header-editorial">
-            <span class="section-kicker">CHĂM SÓC SỨC KHỎE CHỦ ĐỘNG</span>
-            <h2 class="section-title">Các gói tầm soát sức khỏe toàn diện</h2>
+            <span class="section-kicker">CHĂM SÓC CHỦ ĐỘNG</span>
+            <h2 class="section-title">Gói tầm soát sức khỏe toàn diện</h2>
             <p class="section-desc">
-              Được thiết kế khoa học theo từng độ tuổi và yếu tố nguy cơ nghề nghiệp, giúp phát hiện sớm bệnh lý tim mạch, ung bướu, chuyển hóa từ giai đoạn chưa có triệu chứng.
+              Thiết kế khoa học theo từng độ tuổi và yếu tố nguy cơ, giúp phát hiện sớm bệnh lý từ giai đoạn tiềm ẩn chưa có triệu chứng.
             </p>
           </div>
 
@@ -782,22 +777,21 @@
               <div class="package-header">
                 <span class="pkg-tier">TIÊU CHUẨN</span>
                 <h3 class="pkg-title">Khám Tổng Quát Tiêu Chuẩn</h3>
-                <p class="pkg-target">Dành cho nam & nữ dưới 35 tuổi kiểm tra sức khỏe định kỳ hàng năm.</p>
+                <p class="pkg-target">Dành cho người dưới 35 tuổi kiểm tra sức khỏe định kỳ hàng năm.</p>
                 <div class="pkg-price-row">
                   <span class="pkg-number">3.800.000</span>
                   <span class="pkg-curr">VNĐ</span>
                 </div>
               </div>
               <ul class="pkg-features">
-                <li>Khám lâm sàng nội khoa tổng quát, mắt, tai mũi họng, răng hàm mặt</li>
-                <li>Xét nghiệm máu 18 chỉ số (Công thức máu, đường huyết, mỡ máu, chức năng gan, thận)</li>
-                <li>Chụp X-Quang tim phổi kỹ thuật số liều thấp</li>
-                <li>Điện tim đồ (ECG) 12 chuyển đạo</li>
+                <li>Khám lâm sàng nội khoa, mắt, tai mũi họng, răng hàm mặt</li>
+                <li>Xét nghiệm máu & sinh hóa 18 chỉ số thiết yếu</li>
+                <li>Chụp X-Quang phổi kỹ thuật số & Điện tâm đồ ECG</li>
                 <li>Siêu âm màu ổ bụng tổng quát 4D</li>
               </ul>
               <div class="pkg-action-wrap">
                 <button type="button" class="btn btn-outline btn-block btn-select-package" data-package="Gói Tổng Quát Tiêu Chuẩn (3.800.000 VNĐ)">
-                  Đăng ký gói tiêu chuẩn
+                  Chọn gói Tiêu Chuẩn
                 </button>
               </div>
             </div>
@@ -805,9 +799,9 @@
             <!-- Package 2: Most Popular / Executive -->
             <div class="package-column package-featured">
               <div class="package-header">
-                <span class="pkg-tier tier-gold">ĐƯỢC ĐĂNG KÝ NHIỀU NHẤT</span>
+                <span class="pkg-tier tier-gold">ĐĂNG KÝ NHIỀU NHẤT</span>
                 <h3 class="pkg-title">Tầm Soát Chuyên Sâu Executive</h3>
-                <p class="pkg-target">Dành cho người trên 35 tuổi, doanh nhân, người có áp lực công việc cao.</p>
+                <p class="pkg-target">Dành cho người trên 35 tuổi, doanh nhân, người có áp lực cao.</p>
                 <div class="pkg-price-row">
                   <span class="pkg-number">8.900.000</span>
                   <span class="pkg-curr">VNĐ</span>
@@ -815,15 +809,13 @@
               </div>
               <ul class="pkg-features">
                 <li>Toàn bộ danh mục của Gói Khám Tiêu Chuẩn</li>
-                <li>Tầm soát dấu ấn ung thư sớm (Gan AFP, Phổi CEA, Dạ dày CA 19-9, Tuyến tiền liệt/Buồng trứng)</li>
-                <li>Siêu âm Doppler tim & Siêu âm tuyến giáp chuyên sâu</li>
-                <li>Nội soi Tai Mũi Họng ống mềm không đau</li>
-                <li>Đo mật độ xương toàn thân (DEXA scan)</li>
-                <li>Bác sĩ chuyên khoa II tư vấn chế độ ăn & phác đồ phòng bệnh riêng biệt</li>
+                <li>Tầm soát dấu ấn ung thư sớm (Gan, Phổi, Dạ dày, Tuyến giáp)</li>
+                <li>Siêu âm Doppler tim & Tuyến giáp chuyên sâu</li>
+                <li>Đo mật độ xương DEXA & Bác sĩ CKII tư vấn phác đồ</li>
               </ul>
               <div class="pkg-action-wrap">
                 <button type="button" class="btn btn-primary btn-block btn-select-package" data-package="Gói Chuyên Sâu Executive (8.900.000 VNĐ)">
-                  Đăng ký gói chuyên sâu
+                  Chọn gói Chuyên Sâu
                 </button>
               </div>
             </div>
@@ -831,9 +823,9 @@
             <!-- Package 3: VIP Elite -->
             <div class="package-column">
               <div class="package-header">
-                <span class="pkg-tier">VIP ELITE PLATINUM</span>
+                <span class="pkg-tier">VIP PLATINUM</span>
                 <h3 class="pkg-title">Tầm Soát Toàn Thân Platinum</h3>
-                <p class="pkg-target">Tầm soát chuyên sâu toàn thân với công nghệ chụp MRI & CT thế hệ mới.</p>
+                <p class="pkg-target">Tầm soát chuyên sâu toàn diện với công nghệ MRI & CT thế hệ mới.</p>
                 <div class="pkg-price-row">
                   <span class="pkg-number">22.500.000</span>
                   <span class="pkg-curr">VNĐ</span>
@@ -841,15 +833,13 @@
               </div>
               <ul class="pkg-features">
                 <li>Toàn bộ danh mục của Gói Chuyên Sâu Executive</li>
-                <li>Chụp MRI sọ não & mạch máu não 3.0T (Tầm soát nguy cơ phình mạch & đột quỵ)</li>
-                <li>Chụp CT lồng ngực liều siêu thấp (Tầm soát tổn thương phổi mầm mống)</li>
-                <li>Nội soi dạ dày & đại tràng không đau bằng khí CO2 vô trùng</li>
-                <li>Hội chẩn cùng Giáo sư, Giám đốc Y khoa</li>
-                <li>Phục vụ tại phòng chờ VIP riêng biệt với bữa ăn nhẹ 5 sao</li>
+                <li>Chụp MRI sọ não & mạch não 3.0T (Tầm soát đột quỵ)</li>
+                <li>Chụp CT phổi liều thấp & Nội soi tiêu hóa không đau</li>
+                <li>Hội chẩn cùng Giám đốc Y khoa & Lounge VIP riêng</li>
               </ul>
               <div class="pkg-action-wrap">
                 <button type="button" class="btn btn-outline btn-block btn-select-package" data-package="Gói Toàn Thân Platinum (22.500.000 VNĐ)">
-                  Đăng ký gói Platinum
+                  Chọn gói Platinum
                 </button>
               </div>
             </div>
@@ -1085,7 +1075,7 @@
               <span class="insurance-badge">BẢO LÃNH VIỆN PHÍ TRỰC TIẾP (DIRECT BILLING)</span>
               <h3 class="insurance-title">An tâm điều trị — Không bận tâm thủ tục giấy tờ</h3>
               <p class="insurance-desc">
-                Bệnh viện Alivia ký kết hợp tác bảo lãnh viện phí ngoại trú và nội trú trực tiếp với hơn 40 công ty bảo hiểm uy tín trong và ngoài nước. Bạn chỉ cần xuất trình thẻ bảo hiểm và giấy tờ tùy thân, chúng tôi sẽ hoàn tất mọi thủ tục trong vòng 15 phút.
+                Bệnh viện Alivia tiếp nhận bảo lãnh viện phí trực tiếp với hơn 40 công ty bảo hiểm uy tín trong và ngoài nước. Chỉ cần xuất trình thẻ và giấy tờ tùy thân, thủ tục được hoàn tất nhanh chóng trong 15 phút.
               </p>
               <div class="insurance-partners-strip">
                 <span class="partner-tag">Prudential</span>
@@ -1093,20 +1083,17 @@
                 <span class="partner-tag">Dai-ichi Life</span>
                 <span class="partner-tag">Bảo Việt</span>
                 <span class="partner-tag">AIA</span>
-                <span class="partner-tag">Liberty Insurance</span>
+                <span class="partner-tag">Liberty</span>
                 <span class="partner-tag">Chubb Life</span>
                 <span class="partner-tag">Generali</span>
-                <span class="partner-tag">Insmart</span>
-                <span class="partner-tag">Pacific Cross</span>
               </div>
               <div class="bhyt-note">
                 <span class="bhyt-check" aria-hidden="true">✓</span>
-                <span><strong>Hỗ trợ Bảo hiểm y tế (BHYT) Nhà nước:</strong> Tiếp nhận chuyển tuyến BHYT đúng quy định của Bộ Y Tế, bảo đảm quyền lợi tối đa cho người bệnh.</span>
+                <span><strong>Hỗ trợ Bảo hiểm y tế (BHYT) Nhà nước:</strong> Tiếp nhận chuyển tuyến BHYT đúng quy định, bảo đảm quyền lợi tối đa cho người bệnh.</span>
               </div>
             </div>
             <div class="insurance-cta-box">
               <div class="cta-price-pledge">
-                <div class="pledge-emblem" aria-hidden="true">⚖️</div>
                 <h4 class="pledge-title">Cam Kết Minh Bạch Viện Phí</h4>
                 <p>Mọi chi phí thăm khám, xét nghiệm, can thiệp luôn được tư vấn công khai và có sự đồng thuận bằng văn bản của người bệnh trước khi tiến hành.</p>
               </div>
@@ -1117,7 +1104,7 @@
           <!-- Interactive Insurance Pre-Check Tool -->
           <div class="insurance-precheck-tool">
             <div class="precheck-header">
-              <span class="precheck-kicker">CÔNG CỤ TRA CỨU NHANH TRỰC TUYẾN</span>
+              <span class="precheck-kicker">TRA CỨU NHANH</span>
               <h3 class="precheck-title">Kiểm tra quyền lợi bảo lãnh viện phí của bạn</h3>
               <p class="precheck-sub">Chọn công ty bảo hiểm bạn đang tham gia để kiểm tra tính năng bảo lãnh trực tiếp tại quầy thu ngân Alivia:</p>
             </div>
@@ -1154,36 +1141,36 @@
           <div class="booking-concierge-layout">
             <!-- Left Editorial Guidance Pane -->
             <div class="booking-guidance-pane">
-              <span class="section-kicker">TIẾP NHẬN LỊCH KHÁM ƯU TIÊN</span>
+              <span class="section-kicker">TIẾP NHẬN HẸN KHÁM</span>
               <h2 class="booking-heading">
                 Chủ động thời gian, an tâm cùng chuyên gia
               </h2>
               <p class="booking-lead">
-                Điền thông tin bên dưới để được bộ phận Điều phối Y khoa sắp xếp lịch hẹn theo yêu cầu. Quy trình bảo mật, nhanh chóng và hoàn toàn miễn phí thay đổi lịch khám.
+                Điền thông tin bên dưới để bộ phận Điều phối Y khoa sắp xếp lịch hẹn theo yêu cầu. Quy trình bảo mật, nhanh chóng và hoàn toàn miễn phí thay đổi lịch.
               </p>
 
               <div class="booking-guarantees-list">
                 <div class="guarantee-item">
                   <div class="guarantee-bullet">01</div>
                   <div class="guarantee-text">
-                    <strong>Phản hồi trong vòng 15 phút:</strong>
-                    <span>Thư ký Y khoa sẽ gọi điện xác nhận ca trực của bác sĩ và hướng dẫn chuẩn bị trước khi đến.</span>
+                    <strong>Phản hồi trong 15 phút:</strong>
+                    <span>Thư ký Y khoa gọi điện xác nhận ca trực và hướng dẫn chuẩn bị trước khi đến.</span>
                   </div>
                 </div>
 
                 <div class="guarantee-item">
                   <div class="guarantee-bullet">02</div>
                   <div class="guarantee-text">
-                    <strong>Bảo mật thông tin bệnh án (HIPAA):</strong>
-                    <span>Cam kết bảo mật tuyệt đối dữ liệu y tế theo quy chuẩn JCI và Luật Khám bệnh, chữa bệnh Việt Nam.</span>
+                    <strong>Bảo mật thông tin tuyệt đối:</strong>
+                    <span>Cam kết bảo mật dữ liệu y tế theo quy chuẩn JCI và pháp luật Việt Nam.</span>
                   </div>
                 </div>
 
                 <div class="guarantee-item">
                   <div class="guarantee-bullet">03</div>
                   <div class="guarantee-text">
-                    <strong>Hỗ trợ khẩn cấp qua hotline:</strong>
-                    <span>Nếu cần khám ngay trong ngày hoặc có triệu chứng cấp, vui lòng gọi <a href="tel:19006868" class="hotline-inline-link">1900 6868</a> (24/7).</span>
+                    <strong>Hỗ trợ khẩn cấp 24/7:</strong>
+                    <span>Nếu cần khám cấp hoặc trong ngày, gọi ngay <a href="tel:19006868" class="hotline-inline-link">1900 6868</a>.</span>
                   </div>
                 </div>
               </div>
@@ -1192,8 +1179,7 @@
             <!-- Right Concierge Form Suite -->
             <div class="booking-form-suite">
               <div class="form-suite-header">
-                <span class="suite-title">PHIẾU ĐĂNG KÝ HẸN KHÁM TRỰC TUYẾN</span>
-                <span class="suite-badge">TIÊU CHUẨN JCI</span>
+                <span class="suite-title">PHIẾU ĐĂNG KÝ HẸN KHÁM</span>
               </div>
 
               <form id="appointmentForm" class="concierge-form" novalidate>
