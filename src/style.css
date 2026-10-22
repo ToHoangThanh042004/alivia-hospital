@@ -8,31 +8,37 @@
    1. DESIGN TOKENS
    -------------------------------------------------------------------------- */
 :root {
-  /* Brand Authority Palette */
-  --color-ink: #0E1E2E;            /* Primary Text, Header, Authoritative CTAs */
-  --color-ink-subtle: #182B3E;     /* Secondary Dark Surface */
-  --color-charcoal: #253646;       /* Body Text */
-  --color-slate: #5A6B7C;          /* Secondary Text & Captions (WCAG AA compliant) */
+  /* Brand Authority Palette (ALIVIA Signature Standard) */
+  --color-navy: #142F43;           /* Primary Authority, Navbar, Primary CTAs */
+  --color-navy-deep: #0D2131;      /* Deep Midnight Navy for atmospheric depth */
+  --color-ink: #142F43;            /* Primary Headlines & High-Contrast Elements */
+  --color-ink-subtle: #1E3F57;     /* Secondary Dark Surface */
+  --color-charcoal: #253646;       /* Primary Body Text (WCAG 2.2 AA compliant) */
+  --color-slate: #5A6B7C;          /* Secondary Text & Captions */
   --color-slate-light: #8999A8;    /* Muted Labels & Small Meta */
   
   /* Background Canvas */
-  --color-canvas: #FAF9F5;         /* Warm Ivory / Alabaster Background */
-  --color-canvas-alt: #F4F3EE;     /* Slightly deeper section separation */
-  --color-surface: #FFFFFF;        /* Pure White Card & Form Surfaces */
+  --color-canvas: #F5F1E8;         /* Warm Ivory / Editorial Canvas */
+  --color-canvas-alt: #ECE6D8;     /* Warm Ivory Secondary Tone */
+  --color-surface: #FFFFFF;        /* Crisp Pure White for Cards, Forms, Modals */
   --color-surface-tint: #F2F6FA;   /* Soft Clinical Blue Tint */
   
-  /* Healthcare Accents */
+  /* Healing & Prestige Accents */
+  --color-sage: #DCE5E0;           /* Sage Mist: Calming Restorative Green-Grey */
+  --color-sage-soft: #F0F4F2;      /* Soft Sage Tint for Restorative Highlights */
+  --color-sage-border: #CAD6D0;    /* Hairline Sage Border */
+  --color-brass: #B68B62;          /* Muted Brass: JCI Accreditation & Quality Prestige */
+  --color-gold-champagne: #B68B62; /* Backward-compatible Brass token */
+  --color-gold-soft: #FAF5EE;      /* Soft Brass Surface Tint */
+  --color-gold-border: #E8DCCF;    /* Hairline Brass Border */
   --color-blue-medical: #1A5F96;   /* Precision Medical Blue */
-  --color-blue-hover: #134B78;     /* Hover State */
+  --color-blue-hover: #134B78;     /* Medical Blue Hover */
   --color-blue-soft: #E9F2F8;      /* Soft Highlight Pill */
-  --color-gold-champagne: #A48650; /* Subtle Luxury / JCI Prestige */
-  --color-gold-soft: #FAF6ED;      /* Soft Gold Surface */
-  --color-gold-border: #E8DECA;    /* Hairline Gold Border */
   
   /* Hairline Dividers (Architectural & Minimal) */
-  --color-border: #E3DFD7;
-  --color-border-light: #ECE9E2;
-  --color-border-dark: #C9C4BA;
+  --color-border: #E3DFD7;         /* Hairline on Warm Ivory */
+  --color-border-light: #ECE9E2;   /* Light Subdivider */
+  --color-border-dark: #C9C4BA;    /* Deep Hairline */
 
   /* Semantic */
   --color-emergency: #C22929;
@@ -188,6 +194,29 @@ ul {
 :focus-visible {
   outline: 2px solid var(--color-blue-medical);
   outline-offset: 3px;
+}
+
+/* Accessible Skip Link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: var(--color-navy);
+  color: #FFFFFF;
+  padding: 12px 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-brass);
+  box-shadow: var(--shadow-elevated);
+  z-index: 9999;
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 16px;
+  outline: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -814,7 +843,7 @@ ul {
   overflow: hidden;
   box-shadow: var(--shadow-card);
   border: 1px solid var(--color-border);
-  background: radial-gradient(circle at 65% 35%, #1A364F 0%, #0E1E2E 72%, #08121C 100%);
+  background: radial-gradient(circle at 65% 35%, #1E3F57 0%, #142F43 72%, #0D2131 100%);
   min-height: 480px;
   display: flex;
   align-items: center;
@@ -1088,10 +1117,11 @@ ul {
    8B. EDITORIAL PHILOSOPHY STRIP (PULL QUOTE)
    -------------------------------------------------------------------------- */
 .editorial-philosophy-strip {
-  background-color: #FAF8F5;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--space-12) 0;
+  background: linear-gradient(180deg, var(--color-canvas) 0%, var(--color-sage-soft) 50%, var(--color-canvas) 100%);
+  border-top: 1px solid var(--color-sage-border);
+  border-bottom: 1px solid var(--color-sage-border);
+  padding: var(--space-16) 0;
+  position: relative;
 }
 
 .philosophy-inner {
@@ -1103,21 +1133,21 @@ ul {
 
 .philosophy-symbol {
   font-family: var(--font-editorial);
-  font-size: 3.5rem;
-  color: var(--color-gold-champagne);
+  font-size: 3.8rem;
+  color: var(--color-brass);
   line-height: 1;
-  opacity: 0.45;
+  opacity: 0.55;
   margin-bottom: -16px;
 }
 
 .philosophy-quote {
   font-family: var(--font-editorial);
   font-optical-sizing: auto;
-  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-size: clamp(1.3rem, 2.3vw, 1.65rem);
   font-style: italic;
   font-weight: var(--weight-regular);
-  color: var(--color-ink);
-  line-height: 1.58;
+  color: var(--color-navy);
+  line-height: 1.6;
   margin-bottom: var(--space-6);
   letter-spacing: -0.01em;
 }
@@ -1128,18 +1158,18 @@ ul {
   gap: var(--space-4);
   text-align: left;
   background-color: #FFFFFF;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-subtle);
 }
 
 .author-avatar-wrap {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid var(--color-gold-champagne);
+  border: 1.5px solid var(--color-brass);
   flex-shrink: 0;
 }
 
@@ -1247,7 +1277,7 @@ ul {
 
 .second-opinion-ribbon {
   margin-top: var(--space-10);
-  background: linear-gradient(135deg, #0E1E2E 0%, #1A364F 100%);
+  background: linear-gradient(135deg, #142F43 0%, #0D2131 100%);
   color: #FFFFFF;
   border-radius: var(--radius-md);
   padding: var(--space-8);
@@ -1729,6 +1759,7 @@ ul {
   background-color: #FFFFFF;
   box-shadow: var(--shadow-subtle);
   border: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--color-brass);
 }
 
 .facility-tab-panel {
@@ -1810,7 +1841,7 @@ ul {
 }
 
 .spec-bullet {
-  color: var(--color-blue-medical);
+  color: var(--color-brass);
   font-family: var(--font-ui);
   font-weight: var(--weight-semibold);
 }
@@ -1939,13 +1970,13 @@ ul {
 
 .journey-node.active-step .node-card {
   background-color: #FFFFFF;
-  border-color: var(--color-blue-medical);
-  box-shadow: 0 8px 24px rgba(14, 30, 46, 0.08);
+  border-color: var(--color-brass);
+  box-shadow: 0 8px 24px rgba(20, 47, 67, 0.09);
   transform: translateY(-3px);
 }
 
 .journey-node.active-step .node-badge-step {
-  color: var(--color-blue-medical);
+  color: var(--color-brass);
   font-weight: var(--weight-bold);
 }
 
@@ -2523,16 +2554,18 @@ ul {
 }
 
 .time-chip input:checked + .chip-box {
-  background-color: var(--color-blue-soft);
-  border-color: var(--color-blue-medical);
+  background-color: var(--color-surface);
+  border-color: var(--color-ink);
+  box-shadow: 0 0 0 2px var(--color-ink);
 }
 
 .time-chip input:checked + .chip-box .chip-period {
-  color: var(--color-blue-medical);
+  color: var(--color-ink);
+  font-weight: var(--weight-bold);
 }
 
 .time-chip input:checked + .chip-box .chip-hours {
-  color: var(--color-ink);
+  color: var(--color-brass);
   font-weight: var(--weight-semibold);
 }
 
